@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGf-R6-UXi" customClass="MyCustomView" customModule="CustomView" customModuleProvider="target">
+                                <rect key="frame" x="145" y="100" width="310" height="400"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="BdR-Yg-dUc"/>
+                                    <constraint firstAttribute="width" constant="310" id="QFi-4V-zxu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="star"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="MyCustomView"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdw-3y-MJ2" customClass="MyView" customModule="CustomView" customModuleProvider="target">
+                                <rect key="frame" x="20" y="28" width="120" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Hho-KQ-Ab5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="tHq-hy-N3S"/>
+                                    <constraint firstAttribute="height" constant="100" id="wJT-qo-JlB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="星"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="star"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tHq-hy-N3S"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-LP-AZW">
+                                <rect key="frame" x="541" y="562" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <segue destination="nH3-sD-SY9" kind="show" id="Iyv-Fs-8dw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poy-1F-KjD">
+                                <rect key="frame" x="50" y="138" width="61" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Tes-ew-U46"/>
+                                    <constraint firstAttribute="width" constant="61" id="YhP-3b-td5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cHQ-LP-AZW" secondAttribute="bottom" constant="8" id="EZo-zr-x9J"/>
+                            <constraint firstItem="WGf-R6-UXi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V0y-CK-09t"/>
+                            <constraint firstItem="poy-1F-KjD" firstAttribute="centerX" secondItem="Rdw-3y-MJ2" secondAttribute="centerX" id="VOT-yi-Jwj"/>
+                            <constraint firstItem="WGf-R6-UXi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fba-Uu-j9K"/>
+                            <constraint firstItem="Rdw-3y-MJ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ff4-Ce-nXI"/>
+                            <constraint firstItem="cHQ-LP-AZW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="m6U-Cg-XLy"/>
+                            <constraint firstItem="Rdw-3y-MJ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mFc-hI-I6K"/>
+                            <constraint firstItem="poy-1F-KjD" firstAttribute="top" secondItem="Rdw-3y-MJ2" secondAttribute="bottom" constant="10" id="tPL-ZN-1YY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="378"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="SLA-8o-hNj">
+            <objects>
+                <viewController id="nH3-sD-SY9" customClass="MyViewController" customModule="CustomView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y0l-lH-HlV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xop-JQ-q9y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5P-Ua-Ndi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uS-TP-sSC">
+                                <rect key="frame" x="20" y="562" width="40" height="30"/>
+                                <animations/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="close" destination="nH3-sD-SY9" eventType="touchUpInside" id="OGq-ZV-I9U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xop-JQ-q9y" firstAttribute="top" secondItem="6uS-TP-sSC" secondAttribute="bottom" constant="8" id="8ui-su-VnR"/>
+                            <constraint firstItem="6uS-TP-sSC" firstAttribute="leading" secondItem="c5P-Ua-Ndi" secondAttribute="leadingMargin" id="aas-Ls-vjg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sac-sp-Wci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="378"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" width="154" height="146"/>
+    </resources>
+</document>
